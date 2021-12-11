@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Dev Finder</title>
+  </head>
+  <body>
+    <main>
+      <header class="flex flex-jc-bt">
+        <h1>devfinder</h1>
+        <div class="theme-switcher">
+          <p>LIGHT</p>
+          <i class="far fa-lightbulb"></i>
+        </div>
+      </header>
+
+      <!-- Search Section -->
+      <section class="search flex flex-jc-bt">
+        <i class="fas fa-search"></i>
+        <input
+          type="text"
+          name="devName"
+          id="devName"
+          placeholder="Search GitHub username.. "
+        />
+        <input type="button" value="search" />
+      </section>
+
+      <section class="dev">
+        <!-- Dev Info  -->
+        <div class="dev-info flex">
+          <div class="dev-img">
+            <img src="./assets/user1.jpg" alt="User thumbnail" />
+          </div>
+          <div class="dev-social">
+            <p>The Octocat</p>
+            <p>
+              <a href="#">@atoctocat</a>
+            </p>
+            <p>Joined 25 Jan 2011</p>
+          </div>
+        </div>
+        <!-- Dev Info  -->
+        <!-- Dev Description -->
+        <div class="dev-description">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati
+            necessitatibus impedit magni nostrum distinctio qui.
+          </p>
+        </div>
+        <!-- Dev Description -->
+        <div class="dev-stats flex flex-jc-ar">
+          <div class="status">
+            <p>Repos</p>
+            <p>8</p>
+          </div>
+          <div class="status">
+            <p>Followers</p>
+            <p>3938</p>
+          </div>
+          <div class="status">
+            <p>Following</p>
+            <p>8</p>
+          </div>
+        </div>
+        <!-- End Dev Description -->
+
+        <div class="dev-links">
+          <ul>
+            <li>
+              <span><i class="fas fa-map-marker-alt"></i></span> San Francisco
+            </li>
+            <li>
+              <span><i class="fas fa-link"></i></span>
+              <a href="#">https://github.blog</a>
+            </li>
+            <li>
+              <span><i class="fab fa-twitter"></i></span>
+              <a href="#">Not Available</a>
+            </li>
+            <li>
+              <span><i class="fas fa-torii-gate"></i></span> @github
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

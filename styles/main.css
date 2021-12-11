@@ -1,0 +1,292 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-jc-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-jc-bt {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-ar {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  background: #000814;
+  color: white;
+}
+
+main {
+  padding: 1.5rem 1.5rem;
+  min-width: 500px;
+}
+
+main header {
+  padding: 1rem 1.5rem;
+  margin-bottom: 3rem;
+}
+
+main header h1 {
+  color: #ffc300;
+}
+
+main header .theme-switcher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main header .theme-switcher p {
+  letter-spacing: 0.4rem;
+  margin-right: 0.5rem;
+}
+
+main header .theme-switcher i:hover {
+  cursor: pointer;
+}
+
+main .search {
+  background: #001d3d;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
+
+main .search i {
+  font-size: 20px;
+  color: #ffc300;
+}
+
+main .search input[type="text"] {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: white;
+  margin: 0 0.5rem;
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  outline: none;
+}
+
+main .search input[type="button"] {
+  padding: 0.5rem 0.75rem;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffc300;
+  color: #000814;
+  font-weight: 700;
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+}
+
+main .search input[type="button"]:hover {
+  cursor: pointer;
+  background: #ffc300;
+  border-radius: 15px;
+}
+
+main .dev {
+  background: #001d3d;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+}
+
+main .dev .dev-info .dev-img {
+  width: 125px;
+  height: 125px;
+  margin-right: 1.5rem;
+}
+
+main .dev .dev-info .dev-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+}
+
+main .dev .dev-social {
+  color: white;
+}
+
+main .dev .dev-social p {
+  margin-bottom: 0.75rem;
+}
+
+main .dev .dev-social p a {
+  font-size: 1rem;
+  color: #ffc300;
+  text-decoration: none;
+}
+
+main .dev .dev-social p:nth-child(1) {
+  font-size: 20px;
+}
+
+main .dev .dev-social p:nth-last-child(1) {
+  color: #aaaaaa;
+  margin-bottom: none;
+}
+
+main .dev .dev-description {
+  margin: 1rem 0;
+  font-size: 1.5ch;
+  letter-spacing: 1.5px;
+  line-height: 2;
+}
+
+main .dev .dev-stats {
+  margin-top: 2rem;
+  background: #000814;
+  border-radius: 10px;
+  padding: 2rem 3rem;
+}
+
+main .dev .dev-stats .status {
+  text-align: center;
+  color: #aaaaaa;
+  font-size: 20px;
+}
+
+main .dev .dev-stats .status p:nth-child(2) {
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+}
+
+main .dev .dev-links ul {
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+main .dev .dev-links ul li {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+main .dev .dev-links ul li span {
+  margin-right: 1rem;
+}
+
+main .dev .dev-links ul li span i {
+  color: #ffc300;
+}
+
+main .dev .dev-links ul li a {
+  text-decoration: none;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */
