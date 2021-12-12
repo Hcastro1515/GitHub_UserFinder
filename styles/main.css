@@ -102,6 +102,24 @@ select {
       justify-content: space-around;
 }
 
+html {
+  --main-background: #000814;
+  --foreground-color: #001d3d;
+  --text-primary: #ffc300;
+  --yellow: #ffd60a;
+  --text-secondary: rgb(170, 170, 170);
+  --accent: #ffffff;
+}
+
+html[data-theme="light"] {
+  --main-background: #ffffff;
+  --foreground-color: #ffffff;
+  --text-primary: #000000;
+  --yellow: #ffd60a;
+  --text-secondary: rgb(170, 170, 170);
+  --accent: #000000;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,8 +135,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: "Montserrat", sans-serif;
-  background: #000814;
-  color: white;
+  background: var(--main-background);
+  color: var(--accent);
 }
 
 main {
@@ -132,7 +150,7 @@ main header {
 }
 
 main header h1 {
-  color: #ffc300;
+  color: var(--text-primary);
 }
 
 main header .theme-switcher {
@@ -149,12 +167,21 @@ main header .theme-switcher p {
   margin-right: 0.5rem;
 }
 
+main header .theme-switcher i {
+  color: var(--text-primary);
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+}
+
 main header .theme-switcher i:hover {
   cursor: pointer;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  color: var(--accent);
 }
 
 main .search {
-  background: #001d3d;
+  background: var(--foreground-color);
   padding: 1rem 1.5rem;
   border-radius: 10px;
   margin-bottom: 3rem;
@@ -162,7 +189,7 @@ main .search {
 
 main .search i {
   font-size: 20px;
-  color: #ffc300;
+  color: var(--text-primary);
 }
 
 main .search input[type="text"] {
@@ -184,8 +211,8 @@ main .search input[type="button"] {
   font-size: 20px;
   border: none;
   border-radius: 5px;
-  background-color: #ffc300;
-  color: #000814;
+  background-color: var(--text-primary);
+  color: var(--main-background);
   font-weight: 700;
   -webkit-transition: 300ms ease-in;
   transition: 300ms ease-in;
@@ -193,12 +220,12 @@ main .search input[type="button"] {
 
 main .search input[type="button"]:hover {
   cursor: pointer;
-  background: #ffc300;
+  background: var(--text-primary);
   border-radius: 15px;
 }
 
 main .dev {
-  background: #001d3d;
+  background: var(--foreground-color);
   padding: 1rem 1.5rem;
   border-radius: 10px;
 }
@@ -218,7 +245,7 @@ main .dev .dev-info .dev-img img {
 }
 
 main .dev .dev-social {
-  color: white;
+  color: var(--accent);
 }
 
 main .dev .dev-social p {
@@ -227,7 +254,7 @@ main .dev .dev-social p {
 
 main .dev .dev-social p a {
   font-size: 1rem;
-  color: #ffc300;
+  color: var(--text-primary);
   text-decoration: none;
 }
 
@@ -236,7 +263,7 @@ main .dev .dev-social p:nth-child(1) {
 }
 
 main .dev .dev-social p:nth-last-child(1) {
-  color: #aaaaaa;
+  color: var(--text-secondary);
   margin-bottom: none;
 }
 
@@ -249,14 +276,14 @@ main .dev .dev-description {
 
 main .dev .dev-stats {
   margin-top: 2rem;
-  background: #000814;
+  background: var(--main-background);
   border-radius: 10px;
   padding: 2rem 3rem;
 }
 
 main .dev .dev-stats .status {
   text-align: center;
-  color: #aaaaaa;
+  color: var(--text-secondary);
   font-size: 20px;
 }
 
@@ -282,7 +309,7 @@ main .dev .dev-links ul li span {
 }
 
 main .dev .dev-links ul li span i {
-  color: #ffc300;
+  color: var(--text-primary);
 }
 
 main .dev .dev-links ul li a {

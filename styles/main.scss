@@ -2,19 +2,6 @@
 
 //variables
 
-//color
-
-//Primary
-$mainBackground: #000814;
-$foregroundColor: #001d3d;
-
-//text color
-$darkYellow: #ffc300;
-$yellow: #ffd60a;
-$darkGrey: rgb(170, 170, 170);
-
-//end color
-
 //padding
 $cardPadding: 1rem 1.5rem;
 $inputPadding: 0.5rem 0.75rem;
@@ -39,26 +26,46 @@ $borderRadius: 10px;
   }
 }
 
+html {
+  --main-background: #000814;
+  --foreground-color: #001d3d;
+  --text-primary: #ffc300;
+  --yellow: #ffd60a;
+  --text-secondary: rgb(170, 170, 170);
+  --accent: #ffffff; 
+}
+
+html[data-theme="light"] {
+  --main-background: #ffffff;
+  --input-color: #
+  --foreground-color: #ffffff;
+  --text-primary: #000000;
+  --yellow: #ffd60a;
+  --text-secondary: rgb(170, 170, 170);
+  --accent: #000000; 
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
-  background: $mainBackground;
-  color: white;
+  background: var(--main-background);
+  color: var(--accent);
 }
 
 main {
   padding: 1.5rem 1.5rem;
   min-width: 500px;
+  box-shadow: 3px 3px rgba($color: #000000, $alpha: 0.3);
 
   header {
     padding: 1rem 1.5rem;
     margin-bottom: 3rem;
 
     h1 {
-      color: $darkYellow;
+      color: var(--text-primary);
     }
 
     .theme-switcher {
@@ -70,21 +77,28 @@ main {
         margin-right: 0.5rem;
       }
 
-      i:hover {
-        cursor: pointer;
+      i {
+        color: var(--text-primary);
+        transition: all 600ms;
+
+        &:hover {
+          cursor: pointer;
+          transform: rotate(-180deg);
+          color: var(--accent);
+        }
       }
     }
   }
 
   .search {
-    background: $foregroundColor;
+    background: var(--foreground-color);
     padding: $cardPadding;
     border-radius: $borderRadius;
     margin-bottom: 3rem;
 
     i {
       font-size: 20px;
-      color: $darkYellow;
+      color: var(--text-primary);
     }
 
     input[type="text"] {
@@ -106,21 +120,21 @@ main {
       border: none;
       border-radius: 5px;
 
-      background-color: $darkYellow;
-      color: $mainBackground;
+      background-color: var(--text-primary);
+      color: var(--main-background);
       font-weight: 700;
       transition: 300ms ease-in;
 
       &:hover {
         cursor: pointer;
-        background: $darkYellow;
+        background: var(--text-primary);
         border-radius: 15px;
       }
     }
   }
 
   .dev {
-    background: $foregroundColor;
+    background: var(--foreground-color);
     padding: $cardPadding;
     border-radius: $borderRadius;
 
@@ -140,14 +154,14 @@ main {
     }
 
     .dev-social {
-      color: white;
+      color: var(--accent);
 
       p {
         margin-bottom: 0.75rem;
 
         a {
           font-size: 1rem;
-          color: $darkYellow;
+          color: var(--text-primary);
           text-decoration: none;
         }
 
@@ -156,7 +170,7 @@ main {
         }
 
         &:nth-last-child(1) {
-          color: $darkGrey;
+          color: var(--text-secondary);
           margin-bottom: none;
         }
       }
@@ -171,13 +185,13 @@ main {
 
     .dev-stats {
       margin-top: 2rem;
-      background: $mainBackground;
+      background: var(--main-background);
       border-radius: $borderRadius;
       padding: 2rem 3rem;
 
       .status {
         text-align: center;
-        color: $darkGrey;
+        color: var(--text-secondary);
         font-size: 20px;
 
         p:nth-child(2) {
@@ -201,7 +215,7 @@ main {
           span {
             margin-right: 1rem;
             i {
-              color: $darkYellow;
+              color: var(--text-primary);
             }
           }
           a {
@@ -212,4 +226,12 @@ main {
       }
     }
   }
+}
+
+html.transition,
+html.transition *, 
+html.transition *::before,
+html.transition *::after{
+  transition: all 750ms !important;
+  transition-delay: 0;
 }

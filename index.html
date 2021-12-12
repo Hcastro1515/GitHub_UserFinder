@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,7 +27,7 @@
         <h1>devfinder</h1>
         <div class="theme-switcher">
           <p>LIGHT</p>
-          <i class="far fa-lightbulb"></i>
+          <i id="toggle" class="far fa-lightbulb"></i>
         </div>
       </header>
 
@@ -40,7 +40,7 @@
           id="devName"
           placeholder="Search GitHub username.. "
         />
-        <input type="button" value="search" />
+        <input id="searchButton" type="button" value="search" />
       </section>
 
       <section class="dev">
@@ -102,5 +102,6 @@
         </div>
       </section>
     </main>
+    <script src="js/app.js"></script>
   </body>
 </html>
